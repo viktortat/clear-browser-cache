@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Cache Clear</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<link rel="shortcut icon" href="Content/Images/icon.png" type="image/png" />-->
+
+    <!-- Chrome and Safari Pinned Site App -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Resources -->
+    <link href="Content/Sass/all.css?v=1.5.6" rel="stylesheet" />
+    <link href="Content/Fonts/Fontello/css/fontello.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
+    <script src="JavaScript/Libraries/modernizr.js"></script>
+
+    <!-- IOS Pinned Site App-->
+    <link rel="apple-touch-icon-precomposed" href="Content/icon.png" />
+    <!--<script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-41547679-2', 'splintercode.github.io');
+        ga('send', 'pageview');
+    </script>-->
+</head>
+<body ng-controller="BaseCtrl as base">
+    <div class="container">
+        <header>
+            <h1>How do I clear my browser Cache and Cookies?</h1>
+        </header>
+        <main>
+            <p>
+                Sometimes websites store data on your web browser to give you a better browsing experience. Sometimes things go wrong and
+                clearing your browser cache and cookies can help fix those issues.
+            </p>
+            <h2>It looks like you are using {{base.browser.name}}</h2>
+            <p>Version: {{base.browser.version}}</p>
+            <!--{{base.browser}}-->
+
+            <img ng-src="{{base.image}}" />
+        </main>
+        <!--<main ng-view></main>-->
+        <footer></footer>
+    </div>
+    <script src="JavaScript/Config/bundle.js?v=1.5.6" async></script>
+</body>
+</html>

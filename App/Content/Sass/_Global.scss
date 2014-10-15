@@ -1,0 +1,94 @@
+/*!
+    Cory Bateman http://www.corycode.me 
+    MIT License http://opensource.org/licenses/MIT 
+*/
+
+$full-width-max: 48em;
+$full-width-app: 48.125em;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    background: #FFF;
+    color: #2d2d2d;
+    overflow-x: hidden;
+}
+
+*, *:before, *:after {
+    /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+    -webkit-box-sizing: border-box;
+    /* Firefox (desktop or Android) 28- */
+    -moz-box-sizing: border-box;
+    /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+    box-sizing: border-box;
+}
+
+*::selection {
+    //background: $themeGreen; /* Safari */
+    color: #FFF;
+}
+
+*::-moz-selection {
+    //background: $themeGreen; /* Firefox */
+    color: #FFF;
+}
+
+h1, h2, p {
+    font-weight: 100;
+}
+
+p {
+
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.app-width {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    @include respond-min($full-width-app) {
+        margin-top: 40px;
+        max-width: 740px;
+    }
+}
+
+a {
+    color: #2d2d2d;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+        color: #2d2d2d;
+        text-decoration: none;
+    }
+}
+
+header {
+
+}
+
+main {
+
+}
+
+footer {
+
+}
+
+.ng-hide {
+    /* this is just another form of hiding an element */
+    display: block !important;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
