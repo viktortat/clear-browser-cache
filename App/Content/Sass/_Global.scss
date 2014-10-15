@@ -39,7 +39,6 @@ h1, h2, p {
 }
 
 p {
-
 }
 
 .float-left {
@@ -48,18 +47,6 @@ p {
 
 .float-right {
     float: right;
-}
-
-.app-width {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-
-    @include respond-min($full-width-app) {
-        margin-top: 40px;
-        max-width: 740px;
-    }
 }
 
 a {
@@ -74,15 +61,12 @@ a {
 }
 
 header {
-
 }
 
 main {
-
 }
 
 footer {
-
 }
 
 .ng-hide {
@@ -91,4 +75,40 @@ footer {
     position: absolute;
     top: -9999px;
     left: -9999px;
+}
+
+h2 {
+    display: inline-block;
+    position: absolute;
+    left: 100px;
+    font-size: 1.2em;
+    margin-top: 13px;
+
+    @media (min-width: 600px) {
+        font-size: 1.6em;
+    }
+
+    small {
+        display: block;
+    }
+}
+
+.browser-details {
+    position: relative;
+    min-height: 120px;
+}
+
+.browser-image {
+    width: 100%;
+    max-width: 90px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.browser-video {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    clear: both;
 }

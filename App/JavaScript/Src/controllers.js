@@ -7,7 +7,8 @@
         var vm = this;
 
         vm.browser = bowser;
-        vm.image = 'Content/Images/' + getImage();
+        vm.image = getImage();
+        vm.video = getVideo();
 
         function getImage() {
             // http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
@@ -33,7 +34,34 @@
                     browserImage = '';
             }
 
-            return browserImage;
+            return 'Content/Images/' + browserImage;
+        }
+
+        function getVideo() {
+            // http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
+            var browserVideo = '';
+
+            switch (bowser.name) {
+                case "Chrome":
+                    browserVideo = 'Chrome-38.gif';
+                    break;
+                case "Internet Explorer":
+                    browserVideo = 'InternetExplorer-11.gif';
+                    break;
+                case "Firefox":
+                    browserVideo = 'Firefox-32.gif';
+                    break;
+                case "Opera":
+                    browserVideo = 'Opera-12.gif';
+                    break;
+                case "Safari":
+                    browserVideo = 'Safari-8.gif';
+                    break;
+                default:
+                    browserVideo = '';
+            }
+
+            return 'Content/Images/Gifs/' + browserVideo;
         }
     });
 })();

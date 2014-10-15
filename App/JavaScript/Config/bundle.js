@@ -1,4 +1,5 @@
-﻿/*
+﻿///#source 1 1 /App/JavaScript/Libraries/Angular/angular.js
+/*
  AngularJS v1.3.0-rc.5
  (c) 2010-2014 Google, Inc. http://angularjs.org
  License: MIT
@@ -244,6 +245,7 @@ l)}if(k[1]){var s=k[0];k=k[1];var m=h.multiple,r=h.ngOptions,w=!1,z,x=!1,v=C(X.c
 d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")||l.parent().data("$selectController");p&&p.databound||(p=c);f?a.$watch(f,function(a,c){e.$set("value",a);c!==a&&p.removeOption(c);p.addOption(a,d)}):p.addOption(e.value,d);d.on("$destroy",function(){p.removeOption(e.value)})}}}}],Td=ba({restrict:"E",terminal:!1});R.angular.bootstrap?console.log("WARNING: Tried to load angular more than once."):(Jd(),Ld(ya),C(X).ready(function(){Fd(X,pc)}))})(window,document);
 !window.angular.$$csp()&&window.angular.element(document).find("head").prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}</style>');
 
+///#source 1 1 /App/JavaScript/Libraries/Angular/angular-route.min.js
 /*
  AngularJS v1.3.0-rc.5
  (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -258,6 +260,7 @@ b&&b.preventDefault()}function m(){var t=r.current,d=n;if(u)t.params=d.params,e.
 1,m=h.length;k<m;++k){var n=f[k-1],p=h[k];n&&p&&(l[n.name]=p)}f=l}else f=null;else f=null;f=a=f}f&&(d=q(c,{params:e.extend({},b.search(),a),pathParams:a}),d.$$route=c)});return d||f[null]&&q(f[null],{params:{},pathParams:{}})}function s(a,b){var c=[];e.forEach((a||"").split(":"),function(a,e){if(0===e)c.push(a);else{var f=a.match(/(\w+)(.*)/),g=f[1];c.push(b[g]);c.push(f[2]||"");delete b[g]}});return c.join("")}var v=!1,n,u,r={routes:f,reload:function(){v=!0;a.$evalAsync(function(){l();m()})},updateParams:function(a){if(this.current&&
 this.current.$$route){var c={},f=this;e.forEach(Object.keys(a),function(b){f.current.pathParams[b]||(c[b]=a[b])});a=e.extend({},this.current.params,a);b.path(s(this.current.$$route.originalPath,a));b.search(e.extend({},b.search(),c))}else throw A("norout");}};a.$on("$locationChangeStart",l);a.$on("$locationChangeSuccess",m);return r}]});var A=e.$$minErr("ngRoute");p.provider("$routeParams",function(){this.$get=function(){return{}}});p.directive("ngView",u);p.directive("ngView",z);u.$inject=["$route",
 "$anchorScroll","$animate"];z.$inject=["$compile","$controller","$route"]})(window,window.angular);
+///#source 1 1 /App/JavaScript/Libraries/bowser.js
 // https://github.com/ded/bowser
 !function (name, definition) {
     if (typeof module != 'undefined' && module.exports) module.exports['browser'] = definition()
@@ -493,6 +496,7 @@ this.current.$$route){var c={},f=this;e.forEach(Object.keys(a),function(b){f.cur
 
     return bowser
 });
+///#source 1 1 /App/JavaScript/Src/app.js
 (function () {
     'use strict';
 
@@ -511,6 +515,7 @@ this.current.$$route){var c={},f=this;e.forEach(Object.keys(a),function(b){f.cur
         $routeProvider.otherwise({ redirectTo: '/' });
     }]);
 })();
+///#source 1 1 /App/JavaScript/Src/controllers.js
 (function () {
     'use strict';
 
@@ -520,7 +525,8 @@ this.current.$$route){var c={},f=this;e.forEach(Object.keys(a),function(b){f.cur
         var vm = this;
 
         vm.browser = bowser;
-        vm.image = 'Content/Images/' + getImage();
+        vm.image = getImage();
+        vm.video = getVideo();
 
         function getImage() {
             // http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
@@ -546,11 +552,39 @@ this.current.$$route){var c={},f=this;e.forEach(Object.keys(a),function(b){f.cur
                     browserImage = '';
             }
 
-            return browserImage;
+            return 'Content/Images/' + browserImage;
+        }
+
+        function getVideo() {
+            // http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
+            var browserVideo = '';
+
+            switch (bowser.name) {
+                case "Chrome":
+                    browserVideo = 'Chrome-38.gif';
+                    break;
+                case "Internet Explorer":
+                    browserVideo = 'InternetExplorer-11.gif';
+                    break;
+                case "Firefox":
+                    browserVideo = 'Firefox-32.gif';
+                    break;
+                case "Opera":
+                    browserVideo = 'Opera-12.gif';
+                    break;
+                case "Safari":
+                    browserVideo = 'Safari-8.gif';
+                    break;
+                default:
+                    browserVideo = '';
+            }
+
+            return 'Content/Images/Gifs/' + browserVideo;
         }
     });
 })();
 
+///#source 1 1 /App/JavaScript/Src/directives.js
 (function () {
     'use strict';
 
@@ -562,6 +596,7 @@ this.current.$$route){var c={},f=this;e.forEach(Object.keys(a),function(b){f.cur
         };
     }]);
 })();
+///#source 1 1 /App/JavaScript/Src/filters.js
 (function () {
     'use strict';
 
@@ -573,6 +608,7 @@ this.current.$$route){var c={},f=this;e.forEach(Object.keys(a),function(b){f.cur
         };
     }]);
 })();
+///#source 1 1 /App/JavaScript/Src/services.js
 (function () {
     'use strict';
 

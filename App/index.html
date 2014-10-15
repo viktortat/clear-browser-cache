@@ -40,11 +40,15 @@
                 Sometimes websites store data on your web browser to give you a better browsing experience. Sometimes things go wrong and
                 clearing your browser cache and cookies can help fix those issues.
             </p>
-            <h2>It looks like you are using {{base.browser.name}}</h2>
-            <p>Version: {{base.browser.version}}</p>
+            <div class="browser-details">
+                <img ng-src="{{base.image}}" class="browser-image" />
+                <h2>
+                    It looks like you are using {{base.browser.name}}<br />
+                    <small>Version: {{base.browser.version}}</small>
+                </h2>
+            </div>
             <!--{{base.browser}}-->
-
-            <img ng-src="{{base.image}}" />
+            <img ng-src="{{base.video}}" class="browser-video" />
         </main>
         <!--<main ng-view></main>-->
         <footer></footer>
