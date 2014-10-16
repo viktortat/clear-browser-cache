@@ -13,6 +13,7 @@ body {
     background: #FFF;
     color: #2d2d2d;
     overflow-x: hidden;
+    padding: 6px;
 }
 
 *, *:before, *:after {
@@ -96,10 +97,6 @@ h2 {
     @media (min-width: 600px) {
         font-size: 1.6em;
     }
-
-    small {
-        display: block;
-    }
 }
 
 .browser-details {
@@ -124,4 +121,40 @@ h2 {
 
 .phone-width {
     max-width: 420px;
+}
+
+.switch-link, .auto-link {
+    font-size: 0.55em;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.auto-link {
+    font-size: 1.4em;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.options-list {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 660px;
+    overflow: auto;
+}
+
+.options-list__img {
+    width: 19%;
+    margin: 0 1% 0 0;
+    padding: 0;
+    float: left;
+    cursor: pointer;
 }

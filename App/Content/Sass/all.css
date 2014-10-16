@@ -680,7 +680,8 @@ body {
   font-size: 16px;
   background: #FFF;
   color: #2d2d2d;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding: 6px; }
 
 *, *:before, *:after {
   /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
@@ -738,8 +739,6 @@ h2 {
   @media (min-width: 600px) {
     h2 {
       font-size: 1.6em; } }
-  h2 small {
-    display: block; }
 
 .browser-details {
   position: relative;
@@ -760,6 +759,34 @@ h2 {
 
 .phone-width {
   max-width: 420px; }
+
+.switch-link, .auto-link {
+  font-size: 0.55em;
+  text-decoration: none;
+  cursor: pointer; }
+  .switch-link:hover, .auto-link:hover {
+    text-decoration: underline; }
+
+.auto-link {
+  font-size: 1.4em;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer; }
+  .auto-link:hover {
+    text-decoration: none; }
+
+.options-list {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 660px;
+  overflow: auto; }
+
+.options-list__img {
+  width: 19%;
+  margin: 0 1% 0 0;
+  padding: 0;
+  float: left;
+  cursor: pointer; }
 
 @keyframes fadein {
   from {

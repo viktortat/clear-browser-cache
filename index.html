@@ -1,23 +1,34 @@
 ﻿<!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
-    <title>Cache Clear</title>
+    <title>Clear Browser Cache</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--<link rel="shortcut icon" href="Content/Images/icon.png" type="image/png" />-->
+    <link rel="shortcut icon" href="App/Content/Images/Chrome.png" type="image/png" />
+
     <!-- Chrome and Safari Pinned Site App -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- Resources -->
     <link href="App/Content/Sass/all.css?v=1.0" rel="stylesheet" />
-    <link href="App/Content/Fonts/Fontello/css/fontello.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-
-    <script src="JavaScript/Libraries/modernizr.js"></script>
 
     <!-- IOS Pinned Site App-->
     <link rel="apple-touch-icon-precomposed" href="Content/icon.png" />
+
+    <style>
+        .options-list__img {
+            -webkit-filter: grayscale(90%) blur(1px);
+            filter: grayscale(90%) blur(1px);
+        }
+
+        .selected-browser {
+            -webkit-filter: grayscale(0) blur(0);
+            filter: grayscale(0) blur(0);
+        }
+    </style>
+
     <!--<script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -37,25 +48,36 @@
         </header>
         <main>
             <p>
-                Sometimes websites store data on your web browser to give you a better browsing experience. Sometimes things go wrong and
+                Sometimes websites store data on your web browser to give you a better browsing experience. Sometimes things can go wrong and
                 clearing your browser cache and cookies can help fix those issues.
             </p>
-            <div ng-if="base.browser.name.length">
+            <div ng-if="base.browser.name.length && !base.showOptions">
                 <div class="browser-details">
                     <img ng-src="{{base.browser.image}}" class="browser-image" />
                     <h2>
                         It looks like you are using {{base.browser.name}}<br />
                         <small>Version: {{base.browser.version}}</small>
+                        <small ng-click="base.showOptions = !base.showOptions" ng-show="!base.showOptions" class="switch-link">Not using {{base.browser.name}}?</small>
                     </h2>
                 </div>
-                <img ng-src="{{base.browser.video}}" class="browser-video" ng-class="base.bowser.android === true || base.bowser.name === 'iPhone'? 'phone-width' : ''" />
+                <img ng-src="{{base.browser.video}}" ng-show="!base.showOptions" class="browser-video" ng-class="base.bowser.android === true || base.bowser.name === 'iPhone'? 'phone-width' : ''" />
             </div>
-            <div ng-if="!base.browser.name">
+            <strong ng-show="!base.browser.name">
                 Oh No! We currently do not reconize your device. Please check back soon for updates!
+            </strong>
+            <div ng-if="base.showOptions || !base.browser.name">
+                <div ng-show="base.browser.name" ng-click="base.showOptions = !base.showOptions" class="auto-link">Auto Detect Browser</div>
+                <div class="options-list">
+                    <img ng-click="base.getSelectedBrowser('Chrome')" ng-class="base.selectedBrowser.name === 'Chrome' ? 'selected-browser' : ''" src="App/Content/Images/Chrome.png" title="Chrome" class="options-list__img" />
+                    <img ng-click="base.getSelectedBrowser('Firefox')" ng-class="base.selectedBrowser.name === 'Firefox' ? 'selected-browser' : ''" src="App/Content/Images/Firefox.png" title="Firefox" class="options-list__img" />
+                    <img ng-click="base.getSelectedBrowser('Safari')" ng-class="base.selectedBrowser.name === 'Safari' ? 'selected-browser' : ''" src="App/Content/Images/Safari.png" title="Safari" class="options-list__img" />
+                    <img ng-click="base.getSelectedBrowser('Internet Explorer')" ng-class="base.selectedBrowser.name === 'Internet Explorer' ? 'selected-browser' : ''" src="App/Content/Images/InternetExplorer.png" title="Internet Explorer" class="options-list__img" />
+                    <img ng-click="base.getSelectedBrowser('Opera')" ng-class="base.selectedBrowser.name === 'Opera' ? 'selected-browser' : ''" src="App/Content/Images/Opera.png" title="Opera" class="options-list__img" />
+                </div>
+                <img ng-src="{{base.selectedBrowser.video}}" ng-show="base.selectedBrowser.name" class="browser-video" ng-class="base.bowser.android === true || base.bowser.name === 'iPhone'? 'phone-width' : ''" />
             </div>
         </main>
-        <footer>
-        </footer>
+        <footer></footer>
     </div>
     <script src="App/JavaScript/Config/bundle.js?v=1.0" async></script>
 </body>

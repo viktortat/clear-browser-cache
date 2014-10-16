@@ -11,7 +11,6 @@
   <!--The order of the <file> elements determines the order of the files in the bundle.-->
   <files>
     <file>/App/JavaScript/Libraries/Angular/angular.js</file>
-    <file>/App/JavaScript/Libraries/Angular/angular-route.min.js</file>
     <file>/App/JavaScript/Libraries/bowser.js</file>
     <file>/App/JavaScript/Src/app.js</file>
     <file>/App/JavaScript/Src/controllers.js</file>

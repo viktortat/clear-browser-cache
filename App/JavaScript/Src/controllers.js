@@ -5,11 +5,19 @@
 
     appControllers.controller('BaseCtrl', function () {
         var vm = this;
-        var browserDetail = bowser;
-        vm.browser = getBrowser();
-        vm.bowser = bowser;
+        vm.showOptions = false;
+        vm.browser = getBrowser(bowser);
+        vm.selectedBrowser = {
+            name: 'Chrome',
+            video: 'App/Content/Images/Gifs/Chrome-38.gif'
+        }
 
-        function getBrowser() {
+        vm.getSelectedBrowser = function (browserName) {
+            vm.selectedBrowser.name = browserName;
+            vm.selectedBrowser = getBrowser(vm.selectedBrowser);
+        }
+
+        function getBrowser(browserDetail) {
             // http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
             var imagePrefix = 'App/Content/Images/';
             var videoPrefix = 'App/Content/Images/Gifs/';
