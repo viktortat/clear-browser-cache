@@ -11,8 +11,8 @@
 
         function getBrowser() {
             // http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
-            var imagePrefix = 'Content/Images/';
-            var videoPrefix = 'Content/Images/Gifs/';
+            var imagePrefix = 'App/Content/Images/';
+            var videoPrefix = 'App/Content/Images/Gifs/';
             var browser = {};
 
             if (browserDetail.name === 'Android' && browserDetail.android === true) {
