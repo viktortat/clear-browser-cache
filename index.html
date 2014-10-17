@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- Resources -->
-    <link href="App/Content/Sass/all.css?v=1.0" rel="stylesheet" />
+    <link href="App/Content/Sass/all.css?v=1.0.1" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
     <!-- IOS Pinned Site App-->
@@ -68,17 +68,45 @@
             <div ng-if="base.showOptions || !base.browser.name">
                 <div ng-show="base.browser.name" ng-click="base.showOptions = !base.showOptions" class="auto-link">Auto Detect Browser</div>
                 <div class="options-list">
-                    <img ng-click="base.getSelectedBrowser('Chrome')" ng-class="base.selectedBrowser.name === 'Chrome' ? 'selected-browser' : ''" src="App/Content/Images/Chrome.png" title="Chrome" class="options-list__img" />
-                    <img ng-click="base.getSelectedBrowser('Firefox')" ng-class="base.selectedBrowser.name === 'Firefox' ? 'selected-browser' : ''" src="App/Content/Images/Firefox.png" title="Firefox" class="options-list__img" />
-                    <img ng-click="base.getSelectedBrowser('Safari')" ng-class="base.selectedBrowser.name === 'Safari' ? 'selected-browser' : ''" src="App/Content/Images/Safari.png" title="Safari" class="options-list__img" />
-                    <img ng-click="base.getSelectedBrowser('Internet Explorer')" ng-class="base.selectedBrowser.name === 'Internet Explorer' ? 'selected-browser' : ''" src="App/Content/Images/InternetExplorer.png" title="Internet Explorer" class="options-list__img" />
-                    <img ng-click="base.getSelectedBrowser('Opera')" ng-class="base.selectedBrowser.name === 'Opera' ? 'selected-browser' : ''" src="App/Content/Images/Opera.png" title="Opera" class="options-list__img" />
+                    <div class="options-list__browser">
+                        <img ng-click="base.getSelectedBrowser('Chrome')" ng-class="base.selectedBrowser.name === 'Chrome' ? 'selected-browser' : ''" src="App/Content/Images/Chrome.png" title="Chrome" class="options-list__img" />
+                        <ul class="options-list__browser-options">
+                            <li>Windws/Mac</li>
+                            <li>Android</li>
+                        </ul>
+                    </div>
+                    <div class="options-list__browser">
+                        <img ng-click="base.getSelectedBrowser('Firefox')" ng-class="base.selectedBrowser.name === 'Firefox' ? 'selected-browser' : ''" src="App/Content/Images/Firefox.png" title="Firefox" class="options-list__img" />
+                        <ul class="options-list__browser-options">
+                            <li>Windows</li>
+                        </ul>
+                    </div>
+                    <div class="options-list__browser">
+                        <img ng-click="base.getSelectedBrowser('Safari')" ng-class="base.selectedBrowser.name === 'Safari' ? 'selected-browser' : ''" src="App/Content/Images/Safari.png" title="Safari" class="options-list__img" />
+                        <ul class="options-list__browser-options">
+                            <li>Mac</li>
+                            <li>iPad</li>
+                            <li>iPhone</li>
+                        </ul>
+                    </div>
+                    <div class="options-list__browser">
+                        <img ng-click="base.getSelectedBrowser('Internet Explorer')" ng-class="base.selectedBrowser.name === 'Internet Explorer' ? 'selected-browser' : ''" src="App/Content/Images/InternetExplorer.png" title="Internet Explorer" class="options-list__img" />
+                        <ul class="options-list__browser-options">
+                            <li>Windows</li>
+                        </ul>
+                    </div>
+                    <div class="options-list__browser">
+                        <img ng-click="base.getSelectedBrowser('Opera')" ng-class="base.selectedBrowser.name === 'Opera' ? 'selected-browser' : ''" src="App/Content/Images/Opera.png" title="Opera" class="options-list__img" />
+                        <ul class="options-list__browser-options">
+                            <li>Windows</li>
+                        </ul>
+                    </div>
                 </div>
                 <img ng-src="{{base.selectedBrowser.video}}" ng-show="base.selectedBrowser.name" class="browser-video" ng-class="base.bowser.android === true || base.bowser.name === 'iPhone'? 'phone-width' : ''" />
             </div>
         </main>
         <footer></footer>
     </div>
-    <script src="App/JavaScript/Config/bundle.js?v=1.0" async></script>
+    <script src="App/JavaScript/Config/bundle.js?v=1.0.1" async></script>
 </body>
 </html>

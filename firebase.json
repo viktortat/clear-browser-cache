@@ -1,0 +1,9 @@
+{
+  "firebase": "burning-inferno-5031",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

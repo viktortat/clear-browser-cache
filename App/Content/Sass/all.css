@@ -781,11 +781,27 @@ h2 {
   max-width: 660px;
   overflow: auto; }
 
-.options-list__img {
+.options-list__browser-options {
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  list-style: none;
+  display: none; }
+  .options-list__browser-options li {
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 4px 0; }
+    .options-list__browser-options li:hover {
+      text-decoration: none; }
+
+.options-list__browser {
   width: 19%;
   margin: 0 1% 0 0;
+  float: left; }
+
+.options-list__img {
+  width: 100%;
   padding: 0;
-  float: left;
   cursor: pointer; }
 
 @keyframes fadein {
