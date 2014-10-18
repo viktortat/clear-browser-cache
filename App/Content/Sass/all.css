@@ -785,8 +785,7 @@ h2 {
   padding: 0;
   text-align: center;
   margin: 0;
-  list-style: none;
-  display: none; }
+  list-style: none; }
   .options-list__browser-options li {
     cursor: pointer;
     text-decoration: underline;
