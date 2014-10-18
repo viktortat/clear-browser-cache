@@ -87,10 +87,11 @@ h2 {
     position: absolute;
     left: 100px;
     font-size: 1.2em;
-    margin-top: 13px;
+    margin-top: 16px;
 
     @include respond-min(600px) {
         font-size: 1.6em;
+        margin-top: 20px;
     }
 }
 
