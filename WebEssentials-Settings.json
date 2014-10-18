@@ -7,7 +7,9 @@
   },
   "CodeGen": {
     "CamelCasePropertyNames": true,
-    "CamelCaseTypeNames": false
+    "CamelCaseTypeNames": false,
+    "AddTypeScriptReferencePath": true,
+    "CamelCaseEnumerationValues": false
   },
   "CoffeeScript": {
     "CompileOnBuild": false,
@@ -19,11 +21,12 @@
     "MinifyInPlace": false,
     "OutputDirectory": null,
     "ShowPreviewPane": true,
-    "WrapClosure": true
+    "WrapClosure": true,
+    "ProcessSourceMapsForEditorEnhancements": true
   },
   "Css": {
     "AdjustRelativePaths": true,
-    "AutoMinify": false,
+    "AutoMinify": true,
     "GzipMinifiedFiles": false,
     "ShowBrowserTooltip": true,
     "ShowInitialInherit": false,
@@ -34,7 +37,13 @@
     "ValidateStarSelector": true,
     "ValidateVendorSpecifics": true,
     "ValidateZeroUnit": true,
-    "ValidationLocation": "Messages"
+    "ValidationLocation": "Messages",
+    "Autoprefix": false,
+    "AutoprefixerBrowsers": null,
+    "MakeMinified": true,
+    "OutputDirectory": null,
+    "RunOnBuild": false,
+    "SyncBase64ImageValues": true
   },
   "General": {
     "AllMessagesToOutputWindow": false,
@@ -63,16 +72,28 @@
         "HtmlFormat": "<div style=\"background-image=url('{0}')\"></div>",
         "Name": "Inline CSS"
       }
-    ]
+    ],
+    "EnableBootstrapValidation": true,
+    "EnableFoundationValidation": true,
+    "MakeMinified": true,
+    "OutputDirectory": null,
+    "RunOnBuild": false,
+    "MinificationMode": "KeepQuotes"
   },
   "JavaScript": {
-    "AutoMinify": true,
+    "AutoMinify": false,
     "BlockCommentCompletion": true,
     "GenerateSourceMaps": true,
     "GzipMinifiedFiles": false,
-    "LintOnBuild": true,
+    "LintOnBuild": false,
     "LintOnSave": true,
-    "LintResultLocation": "Message"
+    "LintResultLocation": "Message",
+    "MakeMinified": true,
+    "OutputDirectory": null,
+    "RunOnBuild": false,
+    "EvalTreatment": "MakeImmediateSafe",
+    "RootDirectory": "/Scripts/",
+    "TermSemicolons": true
   },
   "Less": {
     "CompileOnBuild": false,
@@ -81,7 +102,9 @@
     "GenerateSourceMaps": true,
     "MinifyInPlace": false,
     "OutputDirectory": null,
-    "ShowPreviewPane": true
+    "ShowPreviewPane": true,
+    "ProcessSourceMapsForEditorEnhancements": true,
+    "StrictMath": false
   },
   "Markdown": {
     "AutoHyperlink": false,
@@ -100,7 +123,7 @@
     "CompileOnBuild": true,
     "CompileOnSave": true,
     "GenerateSourceMaps": false,
-    "MinifyInPlace": false,
+    "MinifyInPlace": true,
     "OutputDirectory": null,
     "ShowPreviewPane": false
   },
@@ -110,7 +133,8 @@
     "GenerateSourceMaps": true,
     "MinifyInPlace": false,
     "OutputDirectory": null,
-    "ShowPreviewPane": true
+    "ShowPreviewPane": true,
+    "ProcessSourceMapsForEditorEnhancements": true
   },
   "TypeScript": {
     "BraceCompletion": true,
@@ -118,5 +142,38 @@
     "LintOnSave": true,
     "LintResultLocation": "Message",
     "ShowPreviewPane": true
+  },
+  "Scss": {
+    "CompileOnBuild": true,
+    "CompileOnSave": true,
+    "EnableChainCompilation": true,
+    "GenerateSourceMaps": false,
+    "MinifyInPlace": false,
+    "OutputDirectory": null,
+    "ShowPreviewPane": true,
+    "OutputStyle": "Expanded",
+    "ProcessSourceMapsForEditorEnhancements": false,
+    "NumberPrecision": 5
+  },
+  "LiveScript": {
+    "CompileOnBuild": false,
+    "CompileOnSave": true,
+    "GenerateSourceMaps": true,
+    "MinifyInPlace": false,
+    "OutputDirectory": null,
+    "ProcessSourceMapsForEditorEnhancements": true,
+    "ShowPreviewPane": true,
+    "WrapClosure": true
+  },
+  "Sprite": {
+    "CssOutputDirectory": null,
+    "IsVertical": true,
+    "LessOutputDirectory": null,
+    "Optimize": true,
+    "RunOnBuild": false,
+    "ScssOutputDirectory": null,
+    "UseAbsoluteUrl": false,
+    "UseFullPathForIdentifierName": true,
+    "OutputDirectory": null
   }
 }
