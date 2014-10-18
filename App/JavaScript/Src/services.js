@@ -30,7 +30,7 @@
         };
 
         var ie = {
-            image: 'InternetExplorer.png',
+            image: 'Internet-Explorer.png',
             video: 'InternetExplorer-11.gif',
             name: 'Internet Explorer',
             vendor: 'Internet Explorer'

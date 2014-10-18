@@ -563,7 +563,7 @@ d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")|
         };
 
         var ie = {
-            image: 'InternetExplorer.png',
+            image: 'Internet-Explorer.png',
             video: 'InternetExplorer-11.gif',
             name: 'Internet Explorer',
             vendor: 'Internet Explorer'
