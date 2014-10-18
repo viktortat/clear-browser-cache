@@ -23,7 +23,7 @@
         };
 
         var ie8 = {
-            image: 'InternetExplorer.png',
+            image: 'Internet-Explorer.png',
             video: 'InternetExplorer-8.gif',
             name: 'Internet Explorer',
             vendor: 'Internet Explorer'
