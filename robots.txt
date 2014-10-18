@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: http://losemycookies.com/sitemap.xml
+Disallow:
