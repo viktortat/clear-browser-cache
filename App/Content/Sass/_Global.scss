@@ -25,14 +25,16 @@ body {
     box-sizing: border-box;
 }
 
-*::selection {
-    //background: $themeGreen; /* Safari */
-    color: #FFF;
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
 }
 
-*::-moz-selection {
-    //background: $themeGreen; /* Firefox */
-    color: #FFF;
+.ng-hide {
+    /* this is just another form of hiding an element */
+    display: block !important;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
 h1, h2, p {
@@ -71,18 +73,10 @@ footer {
     margin-top: 18px;
 }
 
-.ng-hide {
-    /* this is just another form of hiding an element */
-    display: block !important;
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-}
-
 h1 {
     font-size: 2em;
 
-    @media (min-width: 600px) {
+    @include respond-min(600px) {
         font-size: 2.2em;
     }
 }
@@ -94,7 +88,7 @@ h2 {
     font-size: 1.2em;
     margin-top: 13px;
 
-    @media (min-width: 600px) {
+    @include respond-min(600px) {
         font-size: 1.6em;
     }
 }
@@ -169,9 +163,14 @@ h2 {
 }
 
 .options-list__browser {
-    width: 19%;
+    width: 32%;
     margin: 0 1% 0 0;
     float: left;
+
+    @include respond-min(600px) {
+        width: 19%;
+        margin: 0 1% 0 0;
+    }
 }
 
 .options-list__img {

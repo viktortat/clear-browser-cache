@@ -9,11 +9,7 @@
 
         vm.showOptions = false;
         vm.browser = browserService.getBrowser(bowser);
-        vm.selectedBrowser = {
-            name: 'Chrome',
-            vendor: 'Chrome',
-            video: 'App/Content/Images/Gifs/Chrome-38.gif',
-        };
+        vm.selectedBrowser = browserService.getBrowser(bowser);
 
         vm.getSelectedBrowser = function (browserName) {
             vm.selectedBrowser.name = browserName;

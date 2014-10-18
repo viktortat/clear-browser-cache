@@ -500,16 +500,12 @@ d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")|
 
         vm.showOptions = false;
         vm.browser = browserService.getBrowser(bowser);
-        vm.selectedBrowser = {
-            name: 'Chrome',
-            vendor: 'Chrome',
-            video: 'App/Content/Images/Gifs/Chrome-38.gif',
-        }
+        vm.selectedBrowser = browserService.getBrowser(bowser);
 
         vm.getSelectedBrowser = function (browserName) {
             vm.selectedBrowser.name = browserName;
             vm.selectedBrowser = browserService.getBrowser(vm.selectedBrowser);
-        }
+        };
     }]);
 })();
 
@@ -550,63 +546,63 @@ d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")|
             video: 'Android-4.4-default.gif',
             name: 'Android',
             vendor: 'Chrome'
-        }
+        };
 
         var chrome = {
             image: 'Chrome.png',
             video: 'Chrome-38.gif',
             name: 'Chrome',
             vendor: 'Chrome'
-        }
+        };
 
         var ie8 = {
             image: 'InternetExplorer.png',
             video: 'InternetExplorer-8.gif',
             name: 'Internet Explorer',
             vendor: 'Internet Explorer'
-        }
+        };
 
         var ie = {
             image: 'InternetExplorer.png',
             video: 'InternetExplorer-11.gif',
             name: 'Internet Explorer',
             vendor: 'Internet Explorer'
-        }
+        };
 
         var firefox = {
             image: 'Firefox.png',
             video: 'Firefox-32.gif',
             name: 'Firefox',
             vendor: 'Firefox'
-        }
+        };
 
         var opera = {
             image: 'Opera.png',
             video: 'Opera-12.gif',
             name: 'Opera',
             vendor: 'Opera'
-        }
+        };
 
         var safari = {
             image: 'Safari.png',
             video: 'Safari-8.gif',
             name: 'Safari',
             vendor: 'Safari'
-        }
+        };
 
         var iPhone = {
             image: 'Safari.png',
             video: 'Safari-ios8-iphone.gif',
             name: 'Safari on iPhone',
             vendor: 'Safari',
-        }
+        };
 
         var iPad = {
             image: 'Safari.png',
             video: 'Safari-ios8.gif',
             name: 'Safari on iPad',
             vendor: 'Safari',
-        }
+        };
 
         browserService.getBrowser = function (browserDetail) {
             var browser = {};
@@ -642,7 +638,7 @@ d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")|
                 vendor: browser.vendor,
                 version: browserDetail.version
             };
-        }
+        };
 
         return browserService;
     });
