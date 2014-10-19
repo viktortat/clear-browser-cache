@@ -10,7 +10,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     font-size: 16px;
-    background: #FFF;
+    background: #FCFCFC;
     color: #2d2d2d;
     overflow-x: hidden;
     padding: 6px;
@@ -180,4 +180,9 @@ h2 {
     width: 100%;
     padding: 0;
     cursor: pointer;
+}
+
+.built-by {
+    text-align: center;
+    display: block;
 }
