@@ -41,3 +41,10 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+# Project Build Files
+/Build/*
+/node_modules/*
+/.sass-cache
+/App/Content/Sass/*.css

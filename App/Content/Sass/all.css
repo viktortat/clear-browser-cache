@@ -492,13 +492,6 @@ td, th {
   box-sizing: border-box; }
 
 /* --- Column Set Up --- */
-.extend-col, .col-1-contain, .col-2-contain, .col-3-contain, .col-4-contain, .col-5-contain, .col-6-contain, .col-7-contain, .col-8-contain, .col-9-contain, .col-10-contain, .col-11-contain, .col-12-contain, .col-1-xs, .col-2-xs, .col-3-xs, .col-4-xs, .col-5-xs, .col-6-xs, .col-7-xs, .col-8-xs, .col-9-xs, .col-10-xs, .col-11-xs, .col-12-xs, .col-1-sm, .col-2-sm, .col-3-sm, .col-4-sm, .col-5-sm, .col-6-sm, .col-7-sm, .col-8-sm, .col-9-sm, .col-10-sm, .col-11-sm, .col-12-sm, .col-1-md, .col-1, .col-2-md, .col-2, .col-3-md, .col-3, .col-4-md, .col-4, .col-5-md, .col-5, .col-6-md, .col-6, .col-7-md, .col-7, .col-8-md, .col-8, .col-9-md, .col-9, .col-10-md, .col-10, .col-11-md, .col-11, .col-12-md, .col-12, .col-1-lg, .col-2-lg, .col-3-lg, .col-4-lg, .col-5-lg, .col-6-lg, .col-7-lg, .col-8-lg, .col-9-lg, .col-10-lg, .col-11-lg, .col-12-lg, .col-1-c, .col-2-c, .col-3-c, .col-4-c, .col-5-c, .col-6-c, .col-7-c, .col-8-c, .col-9-c, .col-10-c, .col-11-c, .col-12-c {
-  width: 100%;
-  padding: 0 8px 16px 8px;
-  float: left;
-  display: block;
-  min-height: 1px; }
-
 .alpha {
   padding-left: 0; }
 
@@ -528,100 +521,220 @@ td, th {
 .col-1-contain {
   width: 100%;
   max-width: 85.33333px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 .col-2-contain {
   width: 100%;
   max-width: 170.66667px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 .col-3-contain {
   width: 100%;
   max-width: 256px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 .col-4-contain {
   width: 100%;
   max-width: 341.33333px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 .col-5-contain {
   width: 100%;
   max-width: 426.66667px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 .col-6-contain {
   width: 100%;
   max-width: 512px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 .col-7-contain {
   width: 100%;
   max-width: 597.33333px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 .col-8-contain {
   width: 100%;
   max-width: 682.66667px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 .col-9-contain {
   width: 100%;
   max-width: 768px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 .col-10-contain {
   width: 100%;
   max-width: 853.33333px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 .col-11-contain {
   width: 100%;
   max-width: 938.66667px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 .col-12-contain {
   width: 100%;
   max-width: 1024px;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px;
   padding: 0; }
 
 /* #endregion */
 /* #region --- Extra Small Auto Grid --- */
 .col-1-xs {
-  width: 8.33333%; }
+  width: 8.33333%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .col-2-xs {
-  width: 16.66667%; }
+  width: 16.66667%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .col-3-xs {
-  width: 25%; }
+  width: 25%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .col-4-xs {
-  width: 33.33333%; }
+  width: 33.33333%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .col-5-xs {
-  width: 41.66667%; }
+  width: 41.66667%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .col-6-xs {
-  width: 50%; }
+  width: 50%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .col-7-xs {
-  width: 58.33333%; }
+  width: 58.33333%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .col-8-xs {
-  width: 66.66667%; }
+  width: 66.66667%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .col-9-xs {
-  width: 75%; }
+  width: 75%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .col-10-xs {
-  width: 83.33333%; }
+  width: 83.33333%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .col-11-xs {
-  width: 91.66667%; }
+  width: 91.66667%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .col-12-xs {
-  width: 100%; }
+  width: 100%;
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
 
 .visible-xs, .visible {
   display: block; }
@@ -633,29 +746,89 @@ td, th {
 /* #region --- Small Auto Grid 540px and greater --- */
 @media screen and (min-width: 33.75em) {
   .col-1-sm {
-    width: 8.33333%; }
+    width: 8.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-2-sm {
-    width: 16.66667%; }
+    width: 16.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-3-sm {
-    width: 25%; }
+    width: 25%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-4-sm {
-    width: 33.33333%; }
+    width: 33.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-5-sm {
-    width: 41.66667%; }
+    width: 41.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-6-sm {
-    width: 50%; }
+    width: 50%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-7-sm {
-    width: 58.33333%; }
+    width: 58.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-8-sm {
-    width: 66.66667%; }
+    width: 66.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-9-sm {
-    width: 75%; }
+    width: 75%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-10-sm {
-    width: 83.33333%; }
+    width: 83.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-11-sm {
-    width: 91.66667%; }
+    width: 91.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-12-sm {
-    width: 100%; }
+    width: 100%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .visible-sm {
     display: block; }
   .hidden-sm {
@@ -665,29 +838,89 @@ td, th {
 /* #region --- Primary Medium Auto Grid 720px and greater --- */
 @media screen and (min-width: 45em) {
   .col-1-md, .col-1 {
-    width: 8.33333%; }
+    width: 8.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-2-md, .col-2 {
-    width: 16.66667%; }
+    width: 16.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-3-md, .col-3 {
-    width: 25%; }
+    width: 25%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-4-md, .col-4 {
-    width: 33.33333%; }
+    width: 33.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-5-md, .col-5 {
-    width: 41.66667%; }
+    width: 41.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-6-md, .col-6 {
-    width: 50%; }
+    width: 50%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-7-md, .col-7 {
-    width: 58.33333%; }
+    width: 58.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-8-md, .col-8 {
-    width: 66.66667%; }
+    width: 66.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-9-md, .col-9 {
-    width: 75%; }
+    width: 75%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-10-md, .col-10 {
-    width: 83.33333%; }
+    width: 83.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-11-md, .col-11 {
-    width: 91.66667%; }
+    width: 91.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-12-md, .col-12 {
-    width: 100%; }
+    width: 100%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .visible-md {
     display: block; }
   .hidden-md {
@@ -697,29 +930,89 @@ td, th {
 /* #region --- Large Auto Grid 960px and greater --- */
 @media screen and (min-width: 60em) {
   .col-1-lg {
-    width: 8.33333%; }
+    width: 8.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-2-lg {
-    width: 16.66667%; }
+    width: 16.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-3-lg {
-    width: 25%; }
+    width: 25%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-4-lg {
-    width: 33.33333%; }
+    width: 33.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-5-lg {
-    width: 41.66667%; }
+    width: 41.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-6-lg {
-    width: 50%; }
+    width: 50%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-7-lg {
-    width: 58.33333%; }
+    width: 58.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-8-lg {
-    width: 66.66667%; }
+    width: 66.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-9-lg {
-    width: 75%; }
+    width: 75%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-10-lg {
-    width: 83.33333%; }
+    width: 83.33333%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-11-lg {
-    width: 91.66667%; }
+    width: 91.66667%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .col-12-lg {
-    width: 100%; }
+    width: 100%;
+    width: 100%;
+    padding: 0 8px 16px 8px;
+    float: left;
+    display: block;
+    min-height: 1px; }
   .visible-lg {
     display: block; }
   .hidden-lg {
@@ -741,6 +1034,90 @@ td, th {
 .col-11-c { width: 91.663%; } 
 .col-12-c { width: 100%; } 
 */
+.col-1-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
+.col-2-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
+.col-3-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
+.col-4-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
+.col-5-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
+.col-6-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
+.col-7-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
+.col-8-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
+.col-9-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
+.col-10-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
+.col-11-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
+.col-12-c {
+  width: 100%;
+  padding: 0 8px 16px 8px;
+  float: left;
+  display: block;
+  min-height: 1px; }
+
 /* #endregion */
 /* --- Layout helpers --- */
 .display-none {

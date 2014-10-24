@@ -1,0 +1,1 @@
+<h1>A small web app to help clear browser cache and cookies.</h1>
