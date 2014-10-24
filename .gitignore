@@ -44,7 +44,6 @@ Temporary Items
 
 
 # Project Build Files
-/Build/*
 /node_modules/*
 /.sass-cache
 /App/Content/Sass/*.css
