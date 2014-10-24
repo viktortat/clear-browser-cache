@@ -1,1 +1,6 @@
-<h1>A small web app to help clear browser cache and cookies.</h1>
+<h1>Clear Browser Cache and Cookies</h1>
+
+<p>
+Simple site to help users learn how to clear their browser cache and cookies.
+<a href="http://losemycokkies.com">http://losemycookies.com</a>
+</p>
