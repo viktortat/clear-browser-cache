@@ -2,5 +2,5 @@
 
 <p>
 Simple site to help users learn how to clear their browser cache and cookies.
-<a href="http://losemycokkies.com">http://losemycookies.com</a>
+<a href="http://losemycookies.com">http://losemycookies.com</a>
 </p>
