@@ -151,7 +151,7 @@
     "MinifyInPlace": false,
     "OutputDirectory": null,
     "ShowPreviewPane": true,
-    "OutputStyle": "Expanded",
+    "OutputStyle": "Compressed",
     "ProcessSourceMapsForEditorEnhancements": false,
     "NumberPrecision": 5
   },

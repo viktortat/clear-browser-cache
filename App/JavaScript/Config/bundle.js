@@ -1,4 +1,5 @@
-﻿/*
+﻿///#source 1 1 /App/JavaScript/Libraries/Angular/angular.js
+/*
  AngularJS v1.3.0-rc.5
  (c) 2010-2014 Google, Inc. http://angularjs.org
  License: MIT
@@ -244,6 +245,7 @@ l)}if(k[1]){var s=k[0];k=k[1];var m=h.multiple,r=h.ngOptions,w=!1,z,x=!1,v=C(X.c
 d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")||l.parent().data("$selectController");p&&p.databound||(p=c);f?a.$watch(f,function(a,c){e.$set("value",a);c!==a&&p.removeOption(c);p.addOption(a,d)}):p.addOption(e.value,d);d.on("$destroy",function(){p.removeOption(e.value)})}}}}],Td=ba({restrict:"E",terminal:!1});R.angular.bootstrap?console.log("WARNING: Tried to load angular more than once."):(Jd(),Ld(ya),C(X).ready(function(){Fd(X,pc)}))})(window,document);
 !window.angular.$$csp()&&window.angular.element(document).find("head").prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}</style>');
 
+///#source 1 1 /App/JavaScript/Libraries/bowser.js
 // https://github.com/ded/bowser
 !function (name, definition) {
     if (typeof module != 'undefined' && module.exports) module.exports['browser'] = definition()
@@ -479,6 +481,7 @@ d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")|
 
     return bowser
 });
+///#source 1 1 /App/JavaScript/Src/app.js
 (function () {
     'use strict';
 
@@ -489,6 +492,7 @@ d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")|
         'app.controllers'
     ]);
 })();
+///#source 1 1 /App/JavaScript/Src/controllers.js
 // http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
 (function () {
     'use strict';
@@ -509,6 +513,7 @@ d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")|
     }]);
 })();
 
+///#source 1 1 /App/JavaScript/Src/directives.js
 (function () {
     'use strict';
 
@@ -520,6 +525,7 @@ d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")|
         };
     }]);
 })();
+///#source 1 1 /App/JavaScript/Src/filters.js
 (function () {
     'use strict';
 
@@ -531,6 +537,7 @@ d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")|
         };
     }]);
 })();
+///#source 1 1 /App/JavaScript/Src/services.js
 (function () {
     'use strict';
 
