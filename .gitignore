@@ -47,5 +47,3 @@ Temporary Items
 /node_modules/*
 /.sass-cache
 /App/Content/Sass/*.css
-/Build/Css/*.css
-/Build/Js/*.js
