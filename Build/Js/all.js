@@ -488,7 +488,7 @@ d.text())}return function(a,d,e){var l=d.parent(),p=l.data("$selectController")|
         'app.directives',
         'app.controllers'
     ]);
-})(); 
+})();
 // http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
 (function () {
     'use strict';

@@ -7,4 +7,4 @@
         'app.directives',
         'app.controllers'
     ]);
-})(); 
+})();
