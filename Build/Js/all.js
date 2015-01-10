@@ -516,7 +516,7 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
         //    controller: 'ChapterController'
         //});
 
-        $locationProvider.html5Mode(true);
+        //$locationProvider.html5Mode(true);
     }]);
 }());
 // http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
