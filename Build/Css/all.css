@@ -1155,7 +1155,6 @@ h2 {
   max-width: 660px;
   overflow: auto;
 }
-
 .options-list__browser-options {
   padding: 0;
   margin: 0;
@@ -1169,7 +1168,6 @@ h2 {
 .options-list__browser-options li:hover {
   text-decoration: none;
 }
-
 .options-list__browser {
   width: 32%;
   margin: 0 1% 0 0;
@@ -1181,11 +1179,19 @@ h2 {
     margin: 0 1% 0 0;
   }
 }
-
 .options-list__img {
   width: 100%;
   padding: 0;
   cursor: pointer;
+}
+.options-list__img {
+  -webkit-filter: grayscale(90%) blur(1px);
+  filter: grayscale(90%) blur(1px);
+}
+
+.selected-browser {
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
 }
 
 .built-by {

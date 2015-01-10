@@ -135,7 +135,7 @@ h2 {
         text-decoration: underline;
     }
 
-    &--large{
+    &--large {
         @extend .btn-link;
         font-size: 22px;
     }
@@ -146,39 +146,49 @@ h2 {
     width: 100%;
     max-width: 660px;
     overflow: auto;
-}
 
-.options-list__browser-options {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    &__browser-options {
+        padding: 0;
+        margin: 0;
+        list-style: none;
 
-    li {
-        cursor: pointer;
-        text-decoration: underline;
-        padding: 4px 0;
+        li {
+            cursor: pointer;
+            text-decoration: underline;
+            padding: 4px 0;
 
-        &:hover {
-            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
-}
 
-.options-list__browser {
-    width: 32%;
-    margin: 0 1% 0 0;
-    float: left;
-
-    @include respond-min(600px) {
-        width: 19%;
+    &__browser {
+        width: 32%;
         margin: 0 1% 0 0;
+        float: left;
+
+        @include respond-min(600px) {
+            width: 19%;
+            margin: 0 1% 0 0;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    &__img {
+        -webkit-filter: grayscale(90%) blur(1px);
+        filter: grayscale(90%) blur(1px);
     }
 }
 
-.options-list__img {
-    width: 100%;
-    padding: 0;
-    cursor: pointer;
+.selected-browser {
+    -webkit-filter: grayscale(0) blur(0);
+    filter: grayscale(0) blur(0);
 }
 
 .built-by {

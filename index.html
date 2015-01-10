@@ -10,24 +10,13 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
+    <!-- IOS Pinned Site App-->
+    <link rel="apple-touch-icon-precomposed" href="Content/icon.png" />
+
     <!-- Resources -->
     <link href="Build/Css/all.min.css?v=1.2.4" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
-    <!-- IOS Pinned Site App-->
-    <link rel="apple-touch-icon-precomposed" href="Content/icon.png" />
-
-    <style>
-        .options-list__img {
-            -webkit-filter: grayscale(90%) blur(1px);
-            filter: grayscale(90%) blur(1px);
-        }
-
-        .selected-browser {
-            -webkit-filter: grayscale(0) blur(0);
-            filter: grayscale(0) blur(0);
-        }
-    </style>
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
@@ -52,7 +41,7 @@
             </p>
 
             <section ng-cloak>
-                <div ng-if="base.browser.name.length && !base.showOptions">
+                <div ng-if="base.browser.name && !base.showOptions">
                     <div class="browser-details">
                         <img ng-src="{{base.browser.image}}" class="browser-image" />
                         <h2>
