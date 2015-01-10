@@ -58,18 +58,18 @@
                         <h2>
                             It looks like you are using {{base.browser.name}}<br />
                             <small>Version: {{base.browser.version}}</small>
-                            <small ng-click="base.showOptions = !base.showOptions" ng-show="!base.showOptions" class="switch-link">Not using {{base.browser.name}}?</small>
+                            <button ng-click="base.showAllBrowsers()" class="btn-link">Not using {{base.browser.name}}?</button>
                         </h2>
                     </div>
-                    <img ng-src="{{base.browser.video}}" ng-show="!base.showOptions" class="browser-video" ng-class="base.bowser.android === true || base.bowser.name === 'iPhone'? 'phone-width' : ''" />
+                    <img ng-src="{{base.browser.video}}" ng-class="base.bowser.android === true || base.bowser.name === 'iPhone'? 'phone-width' : ''" class="browser-video" />
                 </div>
 
                 <strong ng-show="!base.browser.name">
                     Oh No! We currently do not recognize your device. Please check back soon for updates!
                 </strong>
 
-                <div ng-if="base.showOptions || !base.browser.name">
-                    <div ng-show="base.browser.name" ng-click="base.showOptions = !base.showOptions" class="auto-link">Auto Detect My Browser</div>
+                <div ng-if="base.showOptions || !base.browser.name" class="text-center">
+                    <button ng-show="base.browser.name" ng-click="base.showAllBrowsers()" class="btn-link--large">Auto Detect My Browser</button>
                     <div class="options-list">
                         <div class="options-list__browser">
                             <img ng-click="base.getSelectedBrowser('Chrome')" ng-class="base.selectedBrowser.vendor === 'Chrome' ? 'selected-browser' : ''" src="App/Content/Images/Chrome.png" title="Chrome" class="options-list__img" />

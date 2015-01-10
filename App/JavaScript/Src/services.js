@@ -1,9 +1,9 @@
-﻿(function () {
+﻿(function() {
     'use strict';
 
     var appServices = angular.module('app.services', []).value('version', '1.5.4');
 
-    appServices.factory('browserService', function () {
+    appServices.factory('browserService', function() {
         var browserService = {};
         var imagePrefix = 'App/Content/Images/';
         var videoPrefix = 'App/Content/Images/Gifs/';
@@ -71,7 +71,7 @@
             vendor: 'Safari',
         };
 
-        browserService.getBrowser = function (browserDetail) {
+        browserService.getBrowser = function(browserDetail) {
             var browser = {};
 
             if (browserDetail.name === 'Android' || (browserDetail.name === 'Chrome' && browserDetail.android === true)) {
@@ -109,4 +109,4 @@
 
         return browserService;
     });
-})();
+}());

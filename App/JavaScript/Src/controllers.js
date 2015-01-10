@@ -15,5 +15,9 @@
             vm.selectedBrowser.name = browserName;
             vm.selectedBrowser = browserService.getBrowser(vm.selectedBrowser);
         };
+
+        vm.showAllBrowsers = function() {
+            vm.showOptions = !vm.showOptions;
+        };
     }]);
-})();
+}());

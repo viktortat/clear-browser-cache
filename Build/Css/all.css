@@ -1107,6 +1107,10 @@ h2 {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 .browser-details {
   position: relative;
   min-height: 120px;
@@ -1131,23 +1135,18 @@ h2 {
   max-width: 420px;
 }
 
-.switch-link, .auto-link {
-  font-size: 0.55em;
+.btn-link, .btn-link--large {
   text-decoration: none;
   cursor: pointer;
+  background: none;
+  border: 0;
+  font-size: 16px;
 }
-.switch-link:hover, .auto-link:hover {
+.btn-link:hover, .btn-link--large:hover {
   text-decoration: underline;
 }
-
-.auto-link {
-  font-size: 1.4em;
-  text-align: center;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.auto-link:hover {
-  text-decoration: none;
+.btn-link--large {
+  font-size: 22px;
 }
 
 .options-list {
@@ -1159,7 +1158,6 @@ h2 {
 
 .options-list__browser-options {
   padding: 0;
-  text-align: center;
   margin: 0;
   list-style: none;
 }
