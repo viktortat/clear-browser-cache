@@ -2,21 +2,17 @@
 var plug = require('gulp-load-plugins')();
 
 var jsLibraries = [
-    './App/JavaScript/Libraries/Angular/angular.js',
-    './App/JavaScript/Libraries/Angular/angular-route.js',
-    './App/JavaScript/Libraries/bowser.js',
+    './assets/javascript/libraries/angular/angular.js',
+    './assets/javascript/libraries/angular/angular-route.js',
+    './assets/javascript/libraries/bowser.js',
 ];
 
 var jsSource = [
-    './App/JavaScript/Src/app.js',
-    './App/JavaScript/Src/controllers.js',
-    './App/JavaScript/Src/directives.js',
-    './App/JavaScript/Src/filters.js',
-    './App/JavaScript/Src/services.js'
+    './app/*.js'
 ];
 
 var sassSource = [
-    './App/Content/Sass/*.scss'
+    './styles/*.scss'
 ];
 
 gulp.task('watch', function () {
@@ -30,20 +26,20 @@ gulp.task('styles', function () {
         .src(sassSource)
         .pipe(plug.rubySass({ style: 'expanded' }))
         .pipe(plug.autoprefixer('last 2 version', 'ie8', 'ie9'))
-        .pipe(gulp.dest('./Build/Css'))
+        .pipe(gulp.dest('./build/css'))
         .pipe(plug.rename({ suffix: '.min' }))
         .pipe(plug.minifyCss())
-        .pipe(gulp.dest('./Build/Css'));
+        .pipe(gulp.dest('./build/css'));
 });
 
 gulp.task('js', function () {
     return gulp
         .src(jsLibraries.concat(jsSource))
         .pipe(plug.concat('all.js'))
-        .pipe(gulp.dest('./Build/Js'))
+        .pipe(gulp.dest('./build/js'))
         .pipe(plug.rename({ suffix: '.min' }))
         .pipe(plug.uglify({ mangle: true }))
-        .pipe(gulp.dest('./Build/Js'));
+        .pipe(gulp.dest('./build/js'));
 });
 
 gulp.task('hint', function () {
