@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="How do I clear my browser cache or broswer cookies? This tool can help.">
-    <link rel="shortcut icon" href="app/content/images/cookie.png" type="image/png" />
+    <link rel="shortcut icon" href="assets/images/cookie.png" type="image/png" />
 
     <!-- Chrome and Safari Pinned Site App -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -62,20 +62,20 @@
                     <button ng-show="base.browser.name" ng-click="base.showAllBrowsers()" class="btn-link--large">Auto Detect My Browser</button>
                     <div class="options-list">
                         <div class="options-list__browser">
-                            <img ng-click="base.getSelectedBrowser('Chrome')" ng-class="base.selectedBrowser.vendor === 'Chrome' ? 'selected-browser' : ''" src="App/Content/Images/Chrome.png" title="Chrome" class="options-list__img" />
+                            <img ng-click="base.getSelectedBrowser('Chrome')" ng-class="base.selectedBrowser.vendor === 'Chrome' ? 'selected-browser' : ''" src="assets/images/Chrome.png" title="Chrome" class="options-list__img" />
                             <ul class="options-list__browser-options">
                                 <li><button ng-click="base.getSelectedBrowser('Chrome')" class="btn-link">Windows/Mac</button></li>
                                 <li><button ng-click="base.getSelectedBrowser('Android')" class="btn-link">Android</button></li>
                             </ul>
                         </div>
                         <div class="options-list__browser">
-                            <img ng-click="base.getSelectedBrowser('Firefox')" ng-class="base.selectedBrowser.vendor === 'Firefox' ? 'selected-browser' : ''" src="App/Content/Images/Firefox.png" title="Firefox" class="options-list__img" />
+                            <img ng-click="base.getSelectedBrowser('Firefox')" ng-class="base.selectedBrowser.vendor === 'Firefox' ? 'selected-browser' : ''" src="assets/images/Firefox.png" title="Firefox" class="options-list__img" />
                             <ul class="options-list__browser-options">
                                 <li><button ng-click="base.getSelectedBrowser('Firefox')" class="btn-link">Windows</button></li>
                             </ul>
                         </div>
                         <div class="options-list__browser">
-                            <img ng-click="base.getSelectedBrowser('Safari')" ng-class="base.selectedBrowser.vendor === 'Safari' ? 'selected-browser' : ''" src="App/Content/Images/Safari.png" title="Safari" class="options-list__img" />
+                            <img ng-click="base.getSelectedBrowser('Safari')" ng-class="base.selectedBrowser.vendor === 'Safari' ? 'selected-browser' : ''" src="assets/images/Safari.png" title="Safari" class="options-list__img" />
                             <ul class="options-list__browser-options">
                                 <li><button ng-click="base.getSelectedBrowser('Safari')" class="btn-link">Mac</button></li>
                                 <li><button ng-click="base.getSelectedBrowser('iPad')" class="btn-link">iPad</button></li>
@@ -83,14 +83,14 @@
                             </ul>
                         </div>
                         <div class="options-list__browser">
-                            <img ng-click="base.getSelectedBrowser('Internet Explorer')" ng-class="base.selectedBrowser.vendor === 'Internet Explorer' ? 'selected-browser' : ''" src="App/Content/Images/Internet-Explorer.png" title="Internet Explorer" class="options-list__img" />
+                            <img ng-click="base.getSelectedBrowser('Internet Explorer')" ng-class="base.selectedBrowser.vendor === 'Internet Explorer' ? 'selected-browser' : ''" src="assets/images/Internet-Explorer.png" title="Internet Explorer" class="options-list__img" />
                             <ul class="options-list__browser-options">
                                 <li><button ng-click="base.getSelectedBrowser('Internet Explorer')" class="btn-link">ie9 - ie11</button></li>
                                 <li><button ng-click="base.getSelectedBrowser('Internet Explorer 8')" class="btn-link">ie8</button></li>
                             </ul>
                         </div>
                         <div class="options-list__browser">
-                            <img ng-click="base.getSelectedBrowser('Opera')" ng-class="base.selectedBrowser.vendor === 'Opera' ? 'selected-browser' : ''" src="App/Content/Images/Opera.png" title="Opera" class="options-list__img" />
+                            <img ng-click="base.getSelectedBrowser('Opera')" ng-class="base.selectedBrowser.vendor === 'Opera' ? 'selected-browser' : ''" src="assets/images/Opera.png" title="Opera" class="options-list__img" />
                             <ul class="options-list__browser-options">
                                 <li><button ng-click="base.getSelectedBrowser('Opera')" class="btn-link">Windows</button></li>
                             </ul>
@@ -101,7 +101,7 @@
             </section>
 
             <!--[if IE 8]>
-                <img src="App/Content/Images/Gifs/InternetExplorer-8.gif" alt="ie8" class="browser-video" />
+                <img src="assets/images/gifs/InternetExplorer-8.gif" alt="ie8" class="browser-video" />
             <![endif]-->
             <br />
             <a href="https://github.com/splintercode" target="_blank" class="built-by">Built by Cory Bateman</a>

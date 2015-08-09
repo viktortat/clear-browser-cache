@@ -5,8 +5,8 @@
 
     appServices.factory('browserService', function() {
         var browserService = {};
-        var imagePrefix = 'App/Content/Images/';
-        var videoPrefix = 'App/Content/Images/Gifs/';
+        var imagePrefix = 'assets/images/';
+        var videoPrefix = 'assets/images/gifs/';
 
         var android = {
             image: 'Chrome.png',

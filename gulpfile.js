@@ -2,9 +2,9 @@
 var plug = require('gulp-load-plugins')();
 
 var jsLibraries = [
-    './assets/javascript/libraries/angular/angular.js',
-    './assets/javascript/libraries/angular/angular-route.js',
-    './assets/javascript/libraries/bowser.js',
+    './assets/javascript/angular/angular.js',
+    './assets/javascript/angular/angular-route.js',
+    './assets/javascript/bowser.js',
 ];
 
 var jsSource = [
