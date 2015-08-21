@@ -263,9 +263,14 @@ e,u,b)})}function k(){var a,b;d.forEach(g,function(f,g){var q;if(q=!b){var h=c.p
 g=f[1];c.push(b[g]);c.push(f[2]||"");delete b[g]}});return c.join("")}var w=!1,n,v,s={routes:g,reload:function(){w=!0;a.$evalAsync(function(){l();m()})},updateParams:function(a){if(this.current&&this.current.$$route){var b={},f=this;d.forEach(Object.keys(a),function(c){f.current.pathParams[c]||(b[c]=a[c])});a=d.extend({},this.current.params,a);c.path(t(this.current.$$route.originalPath,a));c.search(d.extend({},c.search(),b))}else throw B("norout");}};a.$on("$locationChangeStart",l);a.$on("$locationChangeSuccess",
 m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function(){this.$get=function(){return{}}});p.directive("ngView",v);p.directive("ngView",A);v.$inject=["$route","$anchorScroll","$animate"];A.$inject=["$compile","$controller","$route"]})(window,window.angular);
 
-// https://github.com/ded/bowser
+/*!
+  * Bowser - a browser detector
+  * https://github.com/ded/bowser
+  * MIT License | (c) Dustin Diaz 2015
+  */
+
 !function (name, definition) {
-    if (typeof module != 'undefined' && module.exports) module.exports['browser'] = definition()
+    if (typeof module != 'undefined' && module.exports) module.exports = definition()
     else if (typeof define == 'function' && define.amd) define(definition)
     else this[name] = definition()
 }('bowser', function () {
@@ -282,9 +287,16 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
             return (match && match.length > 1 && match[1]) || '';
         }
 
+        function getSecondMatch(regex) {
+            var match = ua.match(regex);
+            return (match && match.length > 1 && match[2]) || '';
+        }
+
         var iosdevice = getFirstMatch(/(ipod|iphone|ipad)/i).toLowerCase()
           , likeAndroid = /like android/i.test(ua)
           , android = !likeAndroid && /android/i.test(ua)
+          , chromeBook = /CrOS/.test(ua)
+          , edgeVersion = getFirstMatch(/edge\/(\d+(\.\d+)?)/i)
           , versionIdentifier = getFirstMatch(/version\/(\d+(\.\d+)?)/i)
           , tablet = /tablet/i.test(ua)
           , mobile = !tablet && /[^-]mobi/i.test(ua)
@@ -297,12 +309,25 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
             , version: versionIdentifier || getFirstMatch(/(?:opera|opr)[\s\/](\d+(\.\d+)?)/i)
             }
         }
+        else if (/yabrowser/i.test(ua)) {
+            result = {
+                name: 'Yandex Browser'
+            , yandexbrowser: t
+            , version: versionIdentifier || getFirstMatch(/(?:yabrowser)[\s\/](\d+(\.\d+)?)/i)
+            }
+        }
         else if (/windows phone/i.test(ua)) {
             result = {
                 name: 'Windows Phone'
             , windowsphone: t
-            , msie: t
-            , version: getFirstMatch(/iemobile\/(\d+(\.\d+)?)/i)
+            }
+            if (edgeVersion) {
+                result.msedge = t
+                result.version = edgeVersion
+            }
+            else {
+                result.msie = t
+                result.version = getFirstMatch(/iemobile\/(\d+(\.\d+)?)/i)
             }
         }
         else if (/msie|trident/i.test(ua)) {
@@ -310,6 +335,19 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
                 name: 'Internet Explorer'
             , msie: t
             , version: getFirstMatch(/(?:msie |rv:)(\d+(\.\d+)?)/i)
+            }
+        } else if (chromeBook) {
+            result = {
+                name: 'Chrome'
+            , chromeBook: t
+            , chrome: t
+            , version: getFirstMatch(/(?:chrome|crios|crmo)\/(\d+(\.\d+)?)/i)
+            }
+        } else if (/chrome.+? edge/i.test(ua)) {
+            result = {
+                name: 'Microsoft Edge'
+            , msedge: t
+            , version: edgeVersion
             }
         }
         else if (/chrome|crios|crmo/i.test(ua)) {
@@ -408,10 +446,15 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
             , version: versionIdentifier
             }
         }
-        else result = {}
+        else {
+            result = {
+                name: getFirstMatch(/^(.*)\/(.*) /),
+                version: getSecondMatch(/^(.*)\/(.*) /)
+            };
+        }
 
         // set webkit or gecko flag for browsers based on these engines
-        if (/(apple)?webkit/i.test(ua)) {
+        if (!result.msedge && /(apple)?webkit/i.test(ua)) {
             result.name = result.name || "Webkit"
             result.webkit = t
             if (!result.version && versionIdentifier) {
@@ -424,7 +467,7 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
         }
 
         // set OS flags for platforms that have multiple browsers
-        if (android || result.silk) {
+        if (!result.msedge && (android || result.silk)) {
             result.android = t
         } else if (iosdevice) {
             result[iosdevice] = t
@@ -433,13 +476,13 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
 
         // OS version extraction
         var osVersion = '';
-        if (iosdevice) {
+        if (result.windowsphone) {
+            osVersion = getFirstMatch(/windows phone (?:os)?\s?(\d+(\.\d+)*)/i);
+        } else if (iosdevice) {
             osVersion = getFirstMatch(/os (\d+([_\s]\d+)*) like mac os x/i);
             osVersion = osVersion.replace(/[_\s]/g, '.');
         } else if (android) {
             osVersion = getFirstMatch(/android[ \/-](\d+(\.\d+)*)/i);
-        } else if (result.windowsphone) {
-            osVersion = getFirstMatch(/windows phone (?:os)?\s?(\d+(\.\d+)*)/i);
         } else if (result.webos) {
             osVersion = getFirstMatch(/(?:web|hpw)os\/(\d+(\.\d+)*)/i);
         } else if (result.blackberry) {
@@ -463,7 +506,9 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
 
         // Graded Browser Support
         // http://developer.yahoo.com/yui/articles/gbs
-        if ((result.msie && result.version >= 10) ||
+        if (result.msedge ||
+            (result.msie && result.version >= 10) ||
+            (result.yandexbrowser && result.version >= 15) ||
             (result.chrome && result.version >= 20) ||
             (result.firefox && result.version >= 20.0) ||
             (result.safari && result.version >= 6) ||
@@ -488,6 +533,17 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
 
     var bowser = detect(typeof navigator !== 'undefined' ? navigator.userAgent : '')
 
+    bowser.test = function (browserList) {
+        for (var i = 0; i < browserList.length; ++i) {
+            var browserItem = browserList[i];
+            if (typeof browserItem === 'string') {
+                if (browserItem in bowser) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
     /*
      * Set our detect method to the main bowser object so we can
@@ -564,12 +620,12 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
         };
     }]);
 })();
-(function() {
+(function () {
     'use strict';
 
     var appServices = angular.module('app.services', []).value('version', '1.5.4');
 
-    appServices.factory('browserService', function() {
+    appServices.factory('browserService', function () {
         var browserService = {};
         var imagePrefix = 'assets/images/';
         var videoPrefix = 'assets/images/gifs/';
@@ -601,6 +657,13 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
             name: 'Internet Explorer',
             vendor: 'Internet Explorer'
         };
+
+        var edge = {
+            image: '',
+            video: '',
+            name: 'Microsoft Edge',
+            vendor: 'Microsoft Edge'
+        }
 
         var firefox = {
             image: 'Firefox.png',
@@ -637,7 +700,7 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
             vendor: 'Safari',
         };
 
-        browserService.getBrowser = function(browserDetail) {
+        browserService.getBrowser = function (browserDetail) {
             var browser = {};
 
             if (browserDetail.name === 'Android' || (browserDetail.name === 'Chrome' && browserDetail.android === true)) {
@@ -648,7 +711,10 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
                 browser = ie8;
             } else if (browserDetail.name === 'Internet Explorer') {
                 browser = ie;
-            } else if (browserDetail.name === 'Firefox') {
+            } else if (browserDetail.name === 'Microsoft Edge') {
+                browser = edge;
+            }
+            else if (browserDetail.name === 'Firefox') {
                 browser = firefox;
             } else if (browserDetail.name === 'Opera') {
                 browser = opera;

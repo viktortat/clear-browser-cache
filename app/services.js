@@ -1,9 +1,9 @@
-﻿(function() {
+﻿(function () {
     'use strict';
 
     var appServices = angular.module('app.services', []).value('version', '1.5.4');
 
-    appServices.factory('browserService', function() {
+    appServices.factory('browserService', function () {
         var browserService = {};
         var imagePrefix = 'assets/images/';
         var videoPrefix = 'assets/images/gifs/';
@@ -35,6 +35,13 @@
             name: 'Internet Explorer',
             vendor: 'Internet Explorer'
         };
+
+        var edge = {
+            image: '',
+            video: '',
+            name: 'Microsoft Edge',
+            vendor: 'Microsoft Edge'
+        }
 
         var firefox = {
             image: 'Firefox.png',
@@ -71,7 +78,7 @@
             vendor: 'Safari',
         };
 
-        browserService.getBrowser = function(browserDetail) {
+        browserService.getBrowser = function (browserDetail) {
             var browser = {};
 
             if (browserDetail.name === 'Android' || (browserDetail.name === 'Chrome' && browserDetail.android === true)) {
@@ -82,6 +89,8 @@
                 browser = ie8;
             } else if (browserDetail.name === 'Internet Explorer') {
                 browser = ie;
+            } else if (browserDetail.name === 'Microsoft Edge') {
+                browser = edge;
             } else if (browserDetail.name === 'Firefox') {
                 browser = firefox;
             } else if (browserDetail.name === 'Opera') {
