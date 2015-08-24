@@ -10,70 +10,70 @@
 
         var android = {
             image: 'Chrome.png',
-            video: 'Android-4.4-default.gif',
+            video: 'android-4.4-default.gif',
             name: 'Android',
             vendor: 'Chrome'
         };
 
         var chrome = {
             image: 'Chrome.png',
-            video: 'Chrome-38.gif',
+            video: 'chrome-38.gif',
             name: 'Chrome',
             vendor: 'Chrome'
         };
 
         var ie8 = {
-            image: 'Internet-Explorer.png',
-            video: 'InternetExplorer-8.gif',
+            image: 'internet-explorer.png',
+            video: 'internet-explorer-8.gif',
             name: 'Internet Explorer',
             vendor: 'Internet Explorer'
         };
 
         var ie = {
-            image: 'Internet-Explorer.png',
-            video: 'InternetExplorer-11.gif',
+            image: 'internet-explorer.png',
+            video: 'internet-explorer-11.gif',
             name: 'Internet Explorer',
             vendor: 'Internet Explorer'
         };
 
         var edge = {
-            image: '',
-            video: '',
+            image: 'edge.png',
+            video: 'edge.gif',
             name: 'Microsoft Edge',
             vendor: 'Microsoft Edge'
         }
 
         var firefox = {
-            image: 'Firefox.png',
-            video: 'Firefox-32.gif',
+            image: 'firefox.png',
+            video: 'firefox-32.gif',
             name: 'Firefox',
             vendor: 'Firefox'
         };
 
         var opera = {
-            image: 'Opera.png',
-            video: 'Opera-12.gif',
+            image: 'opera.png',
+            video: 'opera-12.gif',
             name: 'Opera',
             vendor: 'Opera'
         };
 
         var safari = {
-            image: 'Safari.png',
-            video: 'Safari-8.gif',
+            image: 'safari.png',
+            video: 'safari-8.gif',
             name: 'Safari',
             vendor: 'Safari'
         };
 
         var iPhone = {
-            image: 'Safari.png',
-            video: 'Safari-ios8-iphone.gif',
+            image: 'safari.png',
+            video: 'safari-ios8-iphone.gif',
             name: 'Safari on iPhone',
             vendor: 'Safari',
         };
 
         var iPad = {
-            image: 'Safari.png',
-            video: 'Safari-ios8.gif',
+            image: 'safari.png',
+            video: 'safari-ios8.gif',
             name: 'Safari on iPad',
             vendor: 'Safari',
         };
