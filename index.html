@@ -1,18 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
-    <title>Clear Browser Cookies and Cache</title>
+    <title>Clear Browser Cookies, Browser History and Browser Cache</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="How do I clear my browser cache or broswer cookies? This tool can help.">
     <link rel="shortcut icon" href="assets/images/cookie.png" type="image/png" />
-
-    <!-- Chrome and Safari Pinned Site App -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-
-    <!-- IOS Pinned Site App-->
-    <link rel="apple-touch-icon-precomposed" href="content/icon.png" />
 
     <!-- Resources -->
     <link href="build/css/all.min.css?v=1.2.4" rel="stylesheet" />
@@ -40,65 +33,8 @@
                 Sometimes websites store data on your web browser to give you a better browsing experience. Sometimes things can go wrong and
                 clearing your browser cookies and cache can help fix those issues.
             </p>
-
-            <section ng-cloak>
-                <div ng-if="base.browser.name && !base.showOptions">
-                    <div class="browser-details">
-                        <img ng-src="{{base.browser.image}}" class="browser-image" />
-                        <h2>
-                            It looks like you are using {{base.browser.name}}<br />
-                            <small>Version: {{base.browser.version}}</small>
-                            <button ng-click="base.showAllBrowsers()" class="btn-link">Not using {{base.browser.name}}?</button>
-                        </h2>
-                    </div>
-                    <img ng-src="{{base.browser.video}}" ng-class="base.bowser.android === true || base.bowser.name === 'iPhone'? 'phone-width' : ''" class="browser-video" />
-                </div>
-
-                <strong ng-show="!base.browser.name">
-                    Oh No! We currently do not recognize your device. Please check back soon for updates!
-                </strong>
-
-                <div ng-if="base.showOptions || !base.browser.name" class="text-center">
-                    <button ng-show="base.browser.name" ng-click="base.showAllBrowsers()" class="btn-link--large">Auto Detect My Browser</button>
-                    <div class="options-list">
-                        <div class="options-list__browser">
-                            <img ng-click="base.getSelectedBrowser('Chrome')" ng-class="base.selectedBrowser.vendor === 'Chrome' ? 'selected-browser' : ''" src="assets/images/Chrome.png" title="Chrome" class="options-list__img" />
-                            <ul class="options-list__browser-options">
-                                <li><button ng-click="base.getSelectedBrowser('Chrome')" class="btn-link">Windows/Mac</button></li>
-                                <li><button ng-click="base.getSelectedBrowser('Android')" class="btn-link">Android</button></li>
-                            </ul>
-                        </div>
-                        <div class="options-list__browser">
-                            <img ng-click="base.getSelectedBrowser('Firefox')" ng-class="base.selectedBrowser.vendor === 'Firefox' ? 'selected-browser' : ''" src="assets/images/Firefox.png" title="Firefox" class="options-list__img" />
-                            <ul class="options-list__browser-options">
-                                <li><button ng-click="base.getSelectedBrowser('Firefox')" class="btn-link">Windows</button></li>
-                            </ul>
-                        </div>
-                        <div class="options-list__browser">
-                            <img ng-click="base.getSelectedBrowser('Safari')" ng-class="base.selectedBrowser.vendor === 'Safari' ? 'selected-browser' : ''" src="assets/images/Safari.png" title="Safari" class="options-list__img" />
-                            <ul class="options-list__browser-options">
-                                <li><button ng-click="base.getSelectedBrowser('Safari')" class="btn-link">Mac</button></li>
-                                <li><button ng-click="base.getSelectedBrowser('iPad')" class="btn-link">iPad</button></li>
-                                <li><button ng-click="base.getSelectedBrowser('iPhone')" class="btn-link">iPhone</button></li>
-                            </ul>
-                        </div>
-                        <div class="options-list__browser">
-                            <img ng-click="base.getSelectedBrowser('Internet Explorer')" ng-class="base.selectedBrowser.vendor === 'Internet Explorer' ? 'selected-browser' : ''" src="assets/images/Internet-Explorer.png" title="Internet Explorer" class="options-list__img" />
-                            <ul class="options-list__browser-options">
-                                <li><button ng-click="base.getSelectedBrowser('Internet Explorer')" class="btn-link">ie9 - ie11</button></li>
-                                <li><button ng-click="base.getSelectedBrowser('Internet Explorer 8')" class="btn-link">ie8</button></li>
-                            </ul>
-                        </div>
-                        <div class="options-list__browser">
-                            <img ng-click="base.getSelectedBrowser('Opera')" ng-class="base.selectedBrowser.vendor === 'Opera' ? 'selected-browser' : ''" src="assets/images/Opera.png" title="Opera" class="options-list__img" />
-                            <ul class="options-list__browser-options">
-                                <li><button ng-click="base.getSelectedBrowser('Opera')" class="btn-link">Windows</button></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <img ng-src="{{base.selectedBrowser.video}}" ng-show="base.selectedBrowser.name" class="browser-video" ng-class="base.selectedBrowser.name === 'Android' || base.selectedBrowser.name === 'Safari on iPhone'? 'phone-width' : ''" />
-                </div>
-            </section>
+            
+            <ng-view></ng-view>
 
             <!--[if IE 8]>
                 <img src="assets/images/gifs/internet-explorer-8.gif" alt="ie8" class="browser-video" />

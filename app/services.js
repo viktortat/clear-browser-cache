@@ -12,56 +12,64 @@
             image: 'Chrome.png',
             video: 'android-4.4-default.gif',
             name: 'Android',
-            vendor: 'Chrome'
+            vendor: 'Chrome',
+            url: 'chrome-android'
         };
 
         var chrome = {
             image: 'Chrome.png',
             video: 'chrome-38.gif',
             name: 'Chrome',
-            vendor: 'Chrome'
+            vendor: 'Chrome',
+            url: 'chrome'
         };
 
         var ie8 = {
             image: 'internet-explorer.png',
             video: 'internet-explorer-8.gif',
             name: 'Internet Explorer',
-            vendor: 'Internet Explorer'
+            vendor: 'Internet Explorer',
+            url: 'internet-explorer-8'
         };
 
         var ie = {
             image: 'internet-explorer.png',
             video: 'internet-explorer-11.gif',
             name: 'Internet Explorer',
-            vendor: 'Internet Explorer'
+            vendor: 'Internet Explorer',
+            url: 'internet-explorer'
         };
 
         var edge = {
             image: 'edge.png',
             video: 'edge.gif',
             name: 'Microsoft Edge',
-            vendor: 'Microsoft Edge'
-        }
+            vendor: 'Microsoft Edge',
+            url: 'microsoft-edge'
+        };
 
         var firefox = {
             image: 'firefox.png',
             video: 'firefox-32.gif',
             name: 'Firefox',
-            vendor: 'Firefox'
+            vendor: 'Firefox',
+            url: 'firefox'
         };
 
         var opera = {
             image: 'opera.png',
             video: 'opera-12.gif',
             name: 'Opera',
-            vendor: 'Opera'
+            vendor: 'Opera',
+            url: 'opera'
         };
 
         var safari = {
             image: 'safari.png',
             video: 'safari-8.gif',
             name: 'Safari',
-            vendor: 'Safari'
+            vendor: 'Safari',
+            url: 'safari'
         };
 
         var iPhone = {
@@ -69,6 +77,7 @@
             video: 'safari-ios8-iphone.gif',
             name: 'Safari on iPhone',
             vendor: 'Safari',
+            url: 'safari-iphone'
         };
 
         var iPad = {
@@ -76,6 +85,7 @@
             video: 'safari-ios8.gif',
             name: 'Safari on iPad',
             vendor: 'Safari',
+            url: 'safari-ipad'
         };
 
         browserService.getBrowser = function (browserDetail) {
@@ -105,6 +115,7 @@
                 browser.image = '';
                 browser.video = '';
                 browser.name = '';
+                browser.url = '';
             }
 
             return {
@@ -112,7 +123,8 @@
                 video: videoPrefix + browser.video,
                 name: browser.name,
                 vendor: browser.vendor,
-                version: browserDetail.version
+                version: browserDetail.version,
+                url: browser.url
             };
         };
 

@@ -4,20 +4,22 @@
 
     var appControllers = angular.module('app.controllers', []);
 
-    appControllers.controller('BaseCtrl', ['browserService', function (browserService) {
+    appControllers.controller('BaseCtrl', ['$location', 'browserService', function ($location, browserService) {
         var vm = this;
 
-        vm.showOptions = false;
         vm.browser = browserService.getBrowser(bowser);
         vm.selectedBrowser = browserService.getBrowser(bowser);
 
         vm.getSelectedBrowser = function (browserName) {
-            vm.selectedBrowser.name = browserName;
-            vm.selectedBrowser = browserService.getBrowser(vm.selectedBrowser);
+            vm.selectedBrowser = browserService.getBrowser(browserName);
         };
+    }]);
 
-        vm.showAllBrowsers = function() {
-            vm.showOptions = !vm.showOptions;
-        };
+    appControllers.controller('HomeCtrl', ['$location', 'browserService', function ($location, browserService) {
+        if (browserService.getBrowser(bowser).url) {
+            $location.path(browserService.getBrowser(bowser).url);
+        } else {
+            $location.path('unknown-browser');
+        }
     }]);
 }());

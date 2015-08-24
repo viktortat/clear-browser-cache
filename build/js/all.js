@@ -565,14 +565,67 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
         'app.controllers'
     ]);
 
-    app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-        //$routeProvider
-        //.when('/Book/:bookId/ch/:chapterId', {
-        //    templateUrl: 'chapter.html',
-        //    controller: 'ChapterController'
-        //});
+    app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+        $routeProvider
+        .when('/', {
+            title: 'Clear Browser Cookies, Browser History and Browser Cache',
+            templateUrl: 'app/views/home.html'
+        })
+        .when('/unknown-browser', {
+            title: 'Clear Browser Cookies, Browser History and Browser Cache',
+            templateUrl: 'app/views/unknown-browser.html'
+        })
+        .when('/chrome', {
+            title: 'Clear Browser History in Chrome',
+            templateUrl: 'app/views/chrome/chrome.html'
+        })
+        .when('/chrome-android', {
+            title: 'Clear Browser History in Chrome for Android',
+            templateUrl: 'app/views/chrome/chrome-android.html'
+        })
+        .when('/firefox', {
+            title: 'Clear Browser History in Firefox',
+            templateUrl: 'app/views/firefox/firefox.html'
+        })
+        .when('/safari-mac', {
+            title: 'Clear Browser History in Safari for Mac',
+            templateUrl: 'app/views/safari/safari.html'
+        })
+        .when('/safari-ipad', {
+            title: 'Clear Browser History in Safari for iPad',
+            templateUrl: 'app/views/safari/safari-ipad.html'
+        })
+        .when('/safari-iphone', {
+            title: 'Clear Browser History in Safari for iPhone',
+            templateUrl: 'app/views/safari/safari-iphone.html'
+        })
+        .when('/microsoft-edge', {
+            title: 'Clear Browser History in Microsoft Edge for Windows',
+            templateUrl: 'app/views/edge/edge.html'
+        })
+        .when('/internet-explorer', {
+            title: 'Clear Browser History in Internet Explorer versions 9, 10 and 11 for Windows',
+            templateUrl: 'app/views/internet-explorer/internet-explorer.html'
+        })
+        .when('/internet-explorer-8', {
+            title: 'Clear Browser History in Internet Explorer version 8 for Windows XP',
+            templateUrl: 'app/views/internet-explorer/internet-explorer-8.html'
+        })
+        .when('/opera', {
+            title: 'Clear Browser History in Opera',
+            templateUrl: 'app/views/opera/opera.html'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
 
         //$locationProvider.html5Mode(true);
+    }]);
+
+    app.run(['$rootScope', '$route', function ($rootScope, $route) {
+        $rootScope.$on('$routeChangeSuccess', function () {
+            document.title = $route.current.title;
+        });
     }]);
 }());
 // http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
@@ -581,23 +634,26 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
 
     var appControllers = angular.module('app.controllers', []);
 
-    appControllers.controller('BaseCtrl', ['browserService', function (browserService) {
+    appControllers.controller('BaseCtrl', ['$location', 'browserService', function ($location, browserService) {
         var vm = this;
 
-        vm.showOptions = false;
         vm.browser = browserService.getBrowser(bowser);
         vm.selectedBrowser = browserService.getBrowser(bowser);
 
         vm.getSelectedBrowser = function (browserName) {
-            vm.selectedBrowser.name = browserName;
-            vm.selectedBrowser = browserService.getBrowser(vm.selectedBrowser);
-        };
-
-        vm.showAllBrowsers = function() {
-            vm.showOptions = !vm.showOptions;
+            vm.selectedBrowser = browserService.getBrowser(browserName);
         };
     }]);
+
+    appControllers.controller('HomeCtrl', ['$location', 'browserService', function ($location, browserService) {
+        if (browserService.getBrowser(bowser).url) {
+            $location.path(browserService.getBrowser(bowser).url);
+        } else {
+            $location.path('unknown-browser');
+        }
+    }]);
 }());
+
 (function () {
     'use strict';
 
@@ -634,56 +690,64 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
             image: 'Chrome.png',
             video: 'android-4.4-default.gif',
             name: 'Android',
-            vendor: 'Chrome'
+            vendor: 'Chrome',
+            url: 'chrome-android'
         };
 
         var chrome = {
             image: 'Chrome.png',
             video: 'chrome-38.gif',
             name: 'Chrome',
-            vendor: 'Chrome'
+            vendor: 'Chrome',
+            url: 'chrome'
         };
 
         var ie8 = {
             image: 'internet-explorer.png',
             video: 'internet-explorer-8.gif',
             name: 'Internet Explorer',
-            vendor: 'Internet Explorer'
+            vendor: 'Internet Explorer',
+            url: 'internet-explorer-8'
         };
 
         var ie = {
             image: 'internet-explorer.png',
             video: 'internet-explorer-11.gif',
             name: 'Internet Explorer',
-            vendor: 'Internet Explorer'
+            vendor: 'Internet Explorer',
+            url: 'internet-explorer'
         };
 
         var edge = {
             image: 'edge.png',
             video: 'edge.gif',
             name: 'Microsoft Edge',
-            vendor: 'Microsoft Edge'
-        }
+            vendor: 'Microsoft Edge',
+            url: 'microsoft-edge'
+        };
 
         var firefox = {
             image: 'firefox.png',
             video: 'firefox-32.gif',
             name: 'Firefox',
-            vendor: 'Firefox'
+            vendor: 'Firefox',
+            url: 'firefox'
         };
 
         var opera = {
             image: 'opera.png',
             video: 'opera-12.gif',
             name: 'Opera',
-            vendor: 'Opera'
+            vendor: 'Opera',
+            url: 'opera'
         };
 
         var safari = {
             image: 'safari.png',
             video: 'safari-8.gif',
             name: 'Safari',
-            vendor: 'Safari'
+            vendor: 'Safari',
+            url: 'safari'
         };
 
         var iPhone = {
@@ -691,6 +755,7 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
             video: 'safari-ios8-iphone.gif',
             name: 'Safari on iPhone',
             vendor: 'Safari',
+            url: 'safari-iphone'
         };
 
         var iPad = {
@@ -698,6 +763,7 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
             video: 'safari-ios8.gif',
             name: 'Safari on iPad',
             vendor: 'Safari',
+            url: 'safari-ipad'
         };
 
         browserService.getBrowser = function (browserDetail) {
@@ -727,6 +793,7 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
                 browser.image = '';
                 browser.video = '';
                 browser.name = '';
+                browser.url = '';
             }
 
             return {
@@ -734,7 +801,8 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
                 video: videoPrefix + browser.video,
                 name: browser.name,
                 vendor: browser.vendor,
-                version: browserDetail.version
+                version: browserDetail.version,
+                url: browser.url
             };
         };
 
