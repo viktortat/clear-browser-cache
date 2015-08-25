@@ -9,7 +9,7 @@
         var videoPrefix = 'assets/images/gifs/';
 
         var android = {
-            image: 'Chrome.png',
+            image: 'chrome.png',
             video: 'android-4.4-default.gif',
             name: 'Android',
             vendor: 'Chrome',
@@ -17,7 +17,7 @@
         };
 
         var chrome = {
-            image: 'Chrome.png',
+            image: 'chrome.png',
             video: 'chrome-38.gif',
             name: 'Chrome',
             vendor: 'Chrome',
