@@ -7,4 +7,37 @@
   <url>
     <loc>http://losemycookies.com/</loc>
   </url>
+  <url>
+    <loc>http://losemycookies.com/#/unknown-browser</loc>
+  </url>
+  <url>
+    <loc>http://losemycookies.com/#/chrome</loc>
+  </url>
+  <url>
+    <loc>http://losemycookies.com/#/chrome-android</loc>
+  </url>
+  <url>
+    <loc>http://losemycookies.com/#/firefox</loc>
+  </url>
+  <url>
+    <loc>http://losemycookies.com/#/safari-mac</loc>
+  </url>
+  <url>
+    <loc>http://losemycookies.com/#/safari-ipad</loc>
+  </url>
+  <url>
+    <loc>http://losemycookies.com/#/safari-iphone</loc>
+  </url>
+  <url>
+    <loc>http://losemycookies.com/#/microsoft-edge</loc>
+  </url>
+  <url>
+    <loc>http://losemycookies.com/#/internet-explorer</loc>
+  </url>
+  <url>
+    <loc>http://losemycookies.com/#/internet-explorer-8</loc>
+  </url>
+  <url>
+    <loc>http://losemycookies.com/#/opera</loc>
+  </url>
 </urlset>

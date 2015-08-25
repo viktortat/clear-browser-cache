@@ -3,9 +3,7 @@
 
     var app = angular.module('app', [
         'ngRoute',
-        'app.filters',
         'app.services',
-        'app.directives',
         'app.controllers'
     ]);
 
@@ -62,8 +60,6 @@
         .otherwise({
             redirectTo: '/'
         });
-
-        //$locationProvider.html5Mode(true);
     }]);
 
     app.run(['$rootScope', '$route', function ($rootScope, $route) {
@@ -72,3 +68,5 @@
         });
     }]);
 }());
+
+// http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/

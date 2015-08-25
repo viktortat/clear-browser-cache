@@ -1,0 +1,25 @@
+﻿.aside-ad--left, .aside-ad--right {
+    display: none;
+    width: 100px;
+}
+
+@media (min-width: 1300px) {
+    .aside-ad--left, .aside-ad--right {
+        position: fixed;
+        top: 10%;
+        width: 175px;
+        left: 8px;
+    }
+
+    .aside-ad--right {
+        display: block;
+        right: 8px;
+        left: initial;
+    }
+}
+
+@media (min-width: 1400px) {
+    .aside-ad--left {
+        display: block;
+    }
+}

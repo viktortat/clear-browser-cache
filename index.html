@@ -4,16 +4,16 @@
     <title>Clear Browser Cookies, Browser History and Browser Cache</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="How do I clear my browser cache or broswer cookies? This tool can help.">
+    <meta name="description" content="How do I clear my browser history, browser cache or broswer cookies? This tool can help.">
     <link rel="shortcut icon" href="assets/images/cookie.png" type="image/png" />
 
     <!-- Resources -->
-    <link href="build/css/all.min.css?v=1.2.4" rel="stylesheet" />
+    <link href="build/css/all.min.css?v=1.2.5" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
     <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date(); a = s.createElement(o),
             m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
@@ -26,14 +26,14 @@
 <body ng-controller="BaseCtrl as base">
     <div class="container">
         <header>
-            <h1>How do I clear my Browser Cookies and Cache?</h1>
+            <h1>How do I clear my Browser History, Browser Cookies or Browser Cache?</h1>
         </header>
         <main>
             <p>
                 Sometimes websites store data on your web browser to give you a better browsing experience. Sometimes things can go wrong and
                 clearing your browser cookies and cache can help fix those issues.
             </p>
-            
+
             <ng-view></ng-view>
 
             <!--[if IE 8]>
@@ -55,7 +55,19 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </footer>
+        <aside class="aside-ad--right">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- losemycookies.com -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5376316241677971"
+                 data-ad-slot="8767276044"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </aside>
     </div>
-    <script src="build/js/all.min.js?v=1.2.4" async></script>
+    <script src="build/js/all.min.js?v=1.2.5"></script>
 </body>
 </html>

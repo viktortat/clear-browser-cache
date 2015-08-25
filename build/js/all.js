@@ -559,9 +559,7 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
 
     var app = angular.module('app', [
         'ngRoute',
-        'app.filters',
         'app.services',
-        'app.directives',
         'app.controllers'
     ]);
 
@@ -618,8 +616,6 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
         .otherwise({
             redirectTo: '/'
         });
-
-        //$locationProvider.html5Mode(true);
     }]);
 
     app.run(['$rootScope', '$route', function ($rootScope, $route) {
@@ -628,6 +624,7 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
         });
     }]);
 }());
+
 // http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
 (function () {
     'use strict';
@@ -641,7 +638,7 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
         vm.selectedBrowser = browserService.getBrowser(bowser);
 
         vm.getSelectedBrowser = function (browserName) {
-            vm.selectedBrowser = browserService.getBrowser(browserName);
+            vm.selectedBrowser = browserService.getBrowser({ name: browserName });
         };
     }]);
 
@@ -654,28 +651,6 @@ m);return s}]});var B=d.$$minErr("ngRoute");p.provider("$routeParams",function()
     }]);
 }());
 
-(function () {
-    'use strict';
-
-    var appDirectives = angular.module('app.directives', []);
-
-    appDirectives.directive('appVersion', ['version', function (version) {
-        return function (scope, elm, attrs) {
-            elm.text(version);
-        };
-    }]);
-})();
-(function () {
-    'use strict';
-
-    var appFilters = angular.module('app.filters', []);
-
-    appFilters.filter('interpolateVersion', ['version', function (version) {
-        return function (text) {
-            return String(text).replace(/\%VERSION\%/mg, version);
-        };
-    }]);
-})();
 (function () {
     'use strict';
 

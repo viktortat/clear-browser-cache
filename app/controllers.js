@@ -1,5 +1,4 @@
-﻿// http://onelittledesigner.com/rapidweaver/web-icons/free-flat-browser-icons/
-(function () {
+﻿(function () {
     'use strict';
 
     var appControllers = angular.module('app.controllers', []);
@@ -11,7 +10,7 @@
         vm.selectedBrowser = browserService.getBrowser(bowser);
 
         vm.getSelectedBrowser = function (browserName) {
-            vm.selectedBrowser = browserService.getBrowser(browserName);
+            vm.selectedBrowser = browserService.getBrowser({ name: browserName });
         };
     }]);
 

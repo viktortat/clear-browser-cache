@@ -74,6 +74,16 @@ footer {
     padding: 40px 0;
 }
 
+.container {
+    max-width: 860px;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
 h1 {
     font-size: 2em;
     line-height: 1.2em;

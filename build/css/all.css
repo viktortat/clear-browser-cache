@@ -1083,6 +1083,15 @@ footer {
   padding: 40px 0;
 }
 
+.container {
+  max-width: 860px;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1024px;
+  }
+}
 h1 {
   font-size: 2em;
   line-height: 1.2em;
@@ -1215,5 +1224,29 @@ h2 {
   }
   to {
     opacity: 1;
+  }
+}
+.aside-ad--left, .aside-ad--right {
+  display: none;
+  width: 100px;
+}
+
+@media (min-width: 1300px) {
+  .aside-ad--left, .aside-ad--right {
+    position: fixed;
+    top: 10%;
+    width: 175px;
+    left: 8px;
+  }
+
+  .aside-ad--right {
+    display: block;
+    right: 8px;
+    left: initial;
+  }
+}
+@media (min-width: 1400px) {
+  .aside-ad--left {
+    display: block;
   }
 }
